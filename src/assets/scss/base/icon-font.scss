@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "custom-icon-font";
+  src: url('../fonts/icons/custom-icon-font.eot');
+  src: url('../fonts/icons/custom-icon-font.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icons/custom-icon-font.woff') format('woff'),
+    url('../fonts/icons/custom-icon-font.ttf') format('truetype'),
+    url('../fonts/icons/custom-icon-font.svg#custom-icon-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.i-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.i-2x { font-size: 2em; }
+.i-3x { font-size: 3em; }
+.i-4x { font-size: 4em; }
+.i-5x { font-size: 5em; }
+.i-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.i-fi-address-book:before, .i-fi-alert:before, .i-fi-align-center:before, .i-fi-align-justify:before, .i-fi-align-left:before, .i-fi-align-right:before, .i-fi-anchor:before, .i-fi-annotate:before, .i-fi-archive:before, .i-fi-arrow-down:before, .i-fi-arrow-left:before, .i-fi-arrow-right:before, .i-fi-arrow-up:before, .i-fi-arrows-compress:before, .i-fi-arrows-expand:before, .i-fi-arrows-in:before, .i-fi-arrows-out:before, .i-fi-asl:before, .i-fi-asterisk:before, .i-fi-at-sign:before, .i-fi-background-color:before, .i-fi-battery-empty:before, .i-fi-battery-full:before, .i-fi-battery-half:before, .i-fi-bitcoin-circle:before, .i-fi-bitcoin:before, .i-fi-blind:before, .i-fi-bluetooth:before, .i-fi-bold:before, .i-fi-book-bookmark:before, .i-fi-book:before, .i-fi-bookmark:before, .i-fi-braille:before, .i-fi-burst-new:before, .i-fi-burst-sale:before, .i-fi-burst:before, .i-fi-calendar:before, .i-fi-camera:before, .i-fi-check:before, .i-fi-checkbox:before, .i-fi-clipboard-notes:before, .i-fi-clipboard-pencil:before, .i-fi-clipboard:before, .i-fi-clock:before, .i-fi-closed-caption:before, .i-fi-cloud:before, .i-fi-comment-minus:before, .i-fi-comment-quotes:before, .i-fi-comment-video:before, .i-fi-comment:before, .i-fi-comments:before, .i-fi-compass:before, .i-fi-contrast:before, .i-fi-credit-card:before, .i-fi-crop:before, .i-fi-crown:before, .i-fi-css3:before, .i-fi-database:before, .i-fi-die-five:before, .i-fi-die-four:before, .i-fi-die-one:before, .i-fi-die-six:before, .i-fi-die-three:before, .i-fi-die-two:before, .i-fi-dislike:before, .i-fi-dollar-bill:before, .i-fi-dollar:before, .i-fi-download:before, .i-fi-eject:before, .i-fi-elevator:before, .i-fi-euro:before, .i-fi-eye:before, .i-fi-fast-forward:before, .i-fi-female-symbol:before, .i-fi-female:before, .i-fi-filter:before, .i-fi-first-aid:before, .i-fi-flag:before, .i-fi-folder-add:before, .i-fi-folder-lock:before, .i-fi-folder:before, .i-fi-foot:before, .i-fi-foundation:before, .i-fi-graph-bar:before, .i-fi-graph-horizontal:before, .i-fi-graph-pie:before, .i-fi-graph-trend:before, .i-fi-guide-dog:before, .i-fi-hearing-aid:before, .i-fi-heart:before, .i-fi-home:before, .i-fi-html5:before, .i-fi-indent-less:before, .i-fi-indent-more:before, .i-fi-info:before, .i-fi-italic:before, .i-fi-key:before, .i-fi-laptop:before, .i-fi-layout:before, .i-fi-lightbulb:before, .i-fi-like:before, .i-fi-link:before, .i-fi-list-bullet:before, .i-fi-list-number:before, .i-fi-list-thumbnails:before, .i-fi-list:before, .i-fi-lock:before, .i-fi-loop:before, .i-fi-magnifying-glass:before, .i-fi-mail:before, .i-fi-male-female:before, .i-fi-male-symbol:before, .i-fi-male:before, .i-fi-map:before, .i-fi-marker:before, .i-fi-megaphone:before, .i-fi-microphone:before, .i-fi-minus-circle:before, .i-fi-minus:before, .i-fi-mobile-signal:before, .i-fi-mobile:before, .i-fi-monitor:before, .i-fi-mountains:before, .i-fi-music:before, .i-fi-next:before, .i-fi-no-dogs:before, .i-fi-no-smoking:before, .i-fi-page-add:before, .i-fi-page-copy:before, .i-fi-page-csv:before, .i-fi-page-delete:before, .i-fi-page-doc:before, .i-fi-page-edit:before, .i-fi-page-export-csv:before, .i-fi-page-export-doc:before, .i-fi-page-export-pdf:before, .i-fi-page-export:before, .i-fi-page-filled:before, .i-fi-page-multiple:before, .i-fi-page-pdf:before, .i-fi-page-remove:before, .i-fi-page-search:before, .i-fi-page:before, .i-fi-paint-bucket:before, .i-fi-paperclip:before, .i-fi-pause:before, .i-fi-paw:before, .i-fi-paypal:before, .i-fi-pencil:before, .i-fi-photo:before, .i-fi-play-circle:before, .i-fi-play-video:before, .i-fi-play:before, .i-fi-plus:before, .i-fi-pound:before, .i-fi-power:before, .i-fi-previous:before, .i-fi-price-tag:before, .i-fi-pricetag-multiple:before, .i-fi-print:before, .i-fi-prohibited:before, .i-fi-projection-screen:before, .i-fi-puzzle:before, .i-fi-quote:before, .i-fi-record:before, .i-fi-refresh:before, .i-fi-results-demographics:before, .i-fi-results:before, .i-fi-rewind-ten:before, .i-fi-rewind:before, .i-fi-rss:before, .i-fi-safety-cone:before, .i-fi-save:before, .i-fi-share:before, .i-fi-sheriff-badge:before, .i-fi-shield:before, .i-fi-shopping-bag:before, .i-fi-shopping-cart:before, .i-fi-shuffle:before, .i-fi-skull:before, .i-fi-social-500px:before, .i-fi-social-adobe:before, .i-fi-social-amazon:before, .i-fi-social-android:before, .i-fi-social-apple:before, .i-fi-social-behance:before, .i-fi-social-bing:before, .i-fi-social-blogger:before, .i-fi-social-delicious:before, .i-fi-social-designer-news:before, .i-fi-social-deviant-art:before, .i-fi-social-digg:before, .i-fi-social-dribbble:before, .i-fi-social-drive:before, .i-fi-social-dropbox:before, .i-fi-social-evernote:before, .i-fi-social-facebook:before, .i-fi-social-flickr:before, .i-fi-social-forrst:before, .i-fi-social-foursquare:before, .i-fi-social-game-center:before, .i-fi-social-github:before, .i-fi-social-google-plus:before, .i-fi-social-hacker-news:before, .i-fi-social-hi5:before, .i-fi-social-instagram:before, .i-fi-social-joomla:before, .i-fi-social-lastfm:before, .i-fi-social-linkedin:before, .i-fi-social-medium:before, .i-fi-social-myspace:before, .i-fi-social-orkut:before, .i-fi-social-path:before, .i-fi-social-picasa:before, .i-fi-social-pinterest:before, .i-fi-social-rdio:before, .i-fi-social-reddit:before, .i-fi-social-skillshare:before, .i-fi-social-skype:before, .i-fi-social-smashing-mag:before, .i-fi-social-snapchat:before, .i-fi-social-spotify:before, .i-fi-social-squidoo:before, .i-fi-social-stack-overflow:before, .i-fi-social-steam:before, .i-fi-social-stumbleupon:before, .i-fi-social-treehouse:before, .i-fi-social-tumblr:before, .i-fi-social-twitter:before, .i-fi-social-vimeo:before, .i-fi-social-windows:before, .i-fi-social-xbox:before, .i-fi-social-yahoo:before, .i-fi-social-yelp:before, .i-fi-social-youtube:before, .i-fi-social-zerply:before, .i-fi-social-zurb:before, .i-fi-sound:before, .i-fi-star:before, .i-fi-stop:before, .i-fi-strikethrough:before, .i-fi-subscript:before, .i-fi-superscript:before, .i-fi-tablet-landscape:before, .i-fi-tablet-portrait:before, .i-fi-target-two:before, .i-fi-target:before, .i-fi-telephone-accessible:before, .i-fi-telephone:before, .i-fi-text-color:before, .i-fi-thumbnails:before, .i-fi-ticket:before, .i-fi-torso-business:before, .i-fi-torso-female:before, .i-fi-torso:before, .i-fi-torsos-all-female:before, .i-fi-torsos-all:before, .i-fi-torsos-female-male:before, .i-fi-torsos-male-female:before, .i-fi-torsos:before, .i-fi-trash:before, .i-fi-trees:before, .i-fi-trophy:before, .i-fi-underline:before, .i-fi-universal-access:before, .i-fi-unlink:before, .i-fi-unlock:before, .i-fi-upload-cloud:before, .i-fi-upload:before, .i-fi-usb:before, .i-fi-video:before, .i-fi-volume-none:before, .i-fi-volume-strike:before, .i-fi-volume:before, .i-fi-web:before, .i-fi-wheelchair:before, .i-fi-widget:before, .i-fi-wrench:before, .i-fi-x-circle:before, .i-fi-x:before, .i-fi-yen:before, .i-fi-zoom-in:before, .i-fi-zoom-out:before,  .icons-i:before { display: inline-block;
+  font-family: "custom-icon-font";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: inherit; 
+}
+
+.i-fi-address-book:before { content: "\EA01" }
+.i-fi-alert:before { content: "\EA02" }
+.i-fi-align-center:before { content: "\EA03" }
+.i-fi-align-justify:before { content: "\EA04" }
+.i-fi-align-left:before { content: "\EA05" }
+.i-fi-align-right:before { content: "\EA06" }
+.i-fi-anchor:before { content: "\EA07" }
+.i-fi-annotate:before { content: "\EA08" }
+.i-fi-archive:before { content: "\EA09" }
+.i-fi-arrow-down:before { content: "\EA0A" }
+.i-fi-arrow-left:before { content: "\EA0B" }
+.i-fi-arrow-right:before { content: "\EA0C" }
+.i-fi-arrow-up:before { content: "\EA0D" }
+.i-fi-arrows-compress:before { content: "\EA0E" }
+.i-fi-arrows-expand:before { content: "\EA0F" }
+.i-fi-arrows-in:before { content: "\EA10" }
+.i-fi-arrows-out:before { content: "\EA11" }
+.i-fi-asl:before { content: "\EA12" }
+.i-fi-asterisk:before { content: "\EA13" }
+.i-fi-at-sign:before { content: "\EA14" }
+.i-fi-background-color:before { content: "\EA15" }
+.i-fi-battery-empty:before { content: "\EA16" }
+.i-fi-battery-full:before { content: "\EA17" }
+.i-fi-battery-half:before { content: "\EA18" }
+.i-fi-bitcoin-circle:before { content: "\EA19" }
+.i-fi-bitcoin:before { content: "\EA1A" }
+.i-fi-blind:before { content: "\EA1B" }
+.i-fi-bluetooth:before { content: "\EA1C" }
+.i-fi-bold:before { content: "\EA1D" }
+.i-fi-book-bookmark:before { content: "\EA1E" }
+.i-fi-book:before { content: "\EA1F" }
+.i-fi-bookmark:before { content: "\EA20" }
+.i-fi-braille:before { content: "\EA21" }
+.i-fi-burst-new:before { content: "\EA22" }
+.i-fi-burst-sale:before { content: "\EA23" }
+.i-fi-burst:before { content: "\EA24" }
+.i-fi-calendar:before { content: "\EA25" }
+.i-fi-camera:before { content: "\EA26" }
+.i-fi-check:before { content: "\EA27" }
+.i-fi-checkbox:before { content: "\EA28" }
+.i-fi-clipboard-notes:before { content: "\EA29" }
+.i-fi-clipboard-pencil:before { content: "\EA2A" }
+.i-fi-clipboard:before { content: "\EA2B" }
+.i-fi-clock:before { content: "\EA2C" }
+.i-fi-closed-caption:before { content: "\EA2D" }
+.i-fi-cloud:before { content: "\EA2E" }
+.i-fi-comment-minus:before { content: "\EA2F" }
+.i-fi-comment-quotes:before { content: "\EA30" }
+.i-fi-comment-video:before { content: "\EA31" }
+.i-fi-comment:before { content: "\EA32" }
+.i-fi-comments:before { content: "\EA33" }
+.i-fi-compass:before { content: "\EA34" }
+.i-fi-contrast:before { content: "\EA35" }
+.i-fi-credit-card:before { content: "\EA36" }
+.i-fi-crop:before { content: "\EA37" }
+.i-fi-crown:before { content: "\EA38" }
+.i-fi-css3:before { content: "\EA39" }
+.i-fi-database:before { content: "\EA3A" }
+.i-fi-die-five:before { content: "\EA3B" }
+.i-fi-die-four:before { content: "\EA3C" }
+.i-fi-die-one:before { content: "\EA3D" }
+.i-fi-die-six:before { content: "\EA3E" }
+.i-fi-die-three:before { content: "\EA3F" }
+.i-fi-die-two:before { content: "\EA40" }
+.i-fi-dislike:before { content: "\EA41" }
+.i-fi-dollar-bill:before { content: "\EA42" }
+.i-fi-dollar:before { content: "\EA43" }
+.i-fi-download:before { content: "\EA44" }
+.i-fi-eject:before { content: "\EA45" }
+.i-fi-elevator:before { content: "\EA46" }
+.i-fi-euro:before { content: "\EA47" }
+.i-fi-eye:before { content: "\EA48" }
+.i-fi-fast-forward:before { content: "\EA49" }
+.i-fi-female-symbol:before { content: "\EA4A" }
+.i-fi-female:before { content: "\EA4B" }
+.i-fi-filter:before { content: "\EA4C" }
+.i-fi-first-aid:before { content: "\EA4D" }
+.i-fi-flag:before { content: "\EA4E" }
+.i-fi-folder-add:before { content: "\EA4F" }
+.i-fi-folder-lock:before { content: "\EA50" }
+.i-fi-folder:before { content: "\EA51" }
+.i-fi-foot:before { content: "\EA52" }
+.i-fi-foundation:before { content: "\EA53" }
+.i-fi-graph-bar:before { content: "\EA54" }
+.i-fi-graph-horizontal:before { content: "\EA55" }
+.i-fi-graph-pie:before { content: "\EA56" }
+.i-fi-graph-trend:before { content: "\EA57" }
+.i-fi-guide-dog:before { content: "\EA58" }
+.i-fi-hearing-aid:before { content: "\EA59" }
+.i-fi-heart:before { content: "\EA5A" }
+.i-fi-home:before { content: "\EA5B" }
+.i-fi-html5:before { content: "\EA5C" }
+.i-fi-indent-less:before { content: "\EA5D" }
+.i-fi-indent-more:before { content: "\EA5E" }
+.i-fi-info:before { content: "\EA5F" }
+.i-fi-italic:before { content: "\EA60" }
+.i-fi-key:before { content: "\EA61" }
+.i-fi-laptop:before { content: "\EA62" }
+.i-fi-layout:before { content: "\EA63" }
+.i-fi-lightbulb:before { content: "\EA64" }
+.i-fi-like:before { content: "\EA65" }
+.i-fi-link:before { content: "\EA66" }
+.i-fi-list-bullet:before { content: "\EA67" }
+.i-fi-list-number:before { content: "\EA68" }
+.i-fi-list-thumbnails:before { content: "\EA69" }
+.i-fi-list:before { content: "\EA6A" }
+.i-fi-lock:before { content: "\EA6B" }
+.i-fi-loop:before { content: "\EA6C" }
+.i-fi-magnifying-glass:before { content: "\EA6D" }
+.i-fi-mail:before { content: "\EA6E" }
+.i-fi-male-female:before { content: "\EA6F" }
+.i-fi-male-symbol:before { content: "\EA70" }
+.i-fi-male:before { content: "\EA71" }
+.i-fi-map:before { content: "\EA72" }
+.i-fi-marker:before { content: "\EA73" }
+.i-fi-megaphone:before { content: "\EA74" }
+.i-fi-microphone:before { content: "\EA75" }
+.i-fi-minus-circle:before { content: "\EA76" }
+.i-fi-minus:before { content: "\EA77" }
+.i-fi-mobile-signal:before { content: "\EA78" }
+.i-fi-mobile:before { content: "\EA79" }
+.i-fi-monitor:before { content: "\EA7A" }
+.i-fi-mountains:before { content: "\EA7B" }
+.i-fi-music:before { content: "\EA7C" }
+.i-fi-next:before { content: "\EA7D" }
+.i-fi-no-dogs:before { content: "\EA7E" }
+.i-fi-no-smoking:before { content: "\EA7F" }
+.i-fi-page-add:before { content: "\EA80" }
+.i-fi-page-copy:before { content: "\EA81" }
+.i-fi-page-csv:before { content: "\EA82" }
+.i-fi-page-delete:before { content: "\EA83" }
+.i-fi-page-doc:before { content: "\EA84" }
+.i-fi-page-edit:before { content: "\EA85" }
+.i-fi-page-export-csv:before { content: "\EA86" }
+.i-fi-page-export-doc:before { content: "\EA87" }
+.i-fi-page-export-pdf:before { content: "\EA88" }
+.i-fi-page-export:before { content: "\EA89" }
+.i-fi-page-filled:before { content: "\EA8A" }
+.i-fi-page-multiple:before { content: "\EA8B" }
+.i-fi-page-pdf:before { content: "\EA8C" }
+.i-fi-page-remove:before { content: "\EA8D" }
+.i-fi-page-search:before { content: "\EA8E" }
+.i-fi-page:before { content: "\EA8F" }
+.i-fi-paint-bucket:before { content: "\EA90" }
+.i-fi-paperclip:before { content: "\EA91" }
+.i-fi-pause:before { content: "\EA92" }
+.i-fi-paw:before { content: "\EA93" }
+.i-fi-paypal:before { content: "\EA94" }
+.i-fi-pencil:before { content: "\EA95" }
+.i-fi-photo:before { content: "\EA96" }
+.i-fi-play-circle:before { content: "\EA97" }
+.i-fi-play-video:before { content: "\EA98" }
+.i-fi-play:before { content: "\EA99" }
+.i-fi-plus:before { content: "\EA9A" }
+.i-fi-pound:before { content: "\EA9B" }
+.i-fi-power:before { content: "\EA9C" }
+.i-fi-previous:before { content: "\EA9D" }
+.i-fi-price-tag:before { content: "\EA9E" }
+.i-fi-pricetag-multiple:before { content: "\EA9F" }
+.i-fi-print:before { content: "\EAA0" }
+.i-fi-prohibited:before { content: "\EAA1" }
+.i-fi-projection-screen:before { content: "\EAA2" }
+.i-fi-puzzle:before { content: "\EAA3" }
+.i-fi-quote:before { content: "\EAA4" }
+.i-fi-record:before { content: "\EAA5" }
+.i-fi-refresh:before { content: "\EAA6" }
+.i-fi-results-demographics:before { content: "\EAA7" }
+.i-fi-results:before { content: "\EAA8" }
+.i-fi-rewind-ten:before { content: "\EAA9" }
+.i-fi-rewind:before { content: "\EAAA" }
+.i-fi-rss:before { content: "\EAAB" }
+.i-fi-safety-cone:before { content: "\EAAC" }
+.i-fi-save:before { content: "\EAAD" }
+.i-fi-share:before { content: "\EAAE" }
+.i-fi-sheriff-badge:before { content: "\EAAF" }
+.i-fi-shield:before { content: "\EAB0" }
+.i-fi-shopping-bag:before { content: "\EAB1" }
+.i-fi-shopping-cart:before { content: "\EAB2" }
+.i-fi-shuffle:before { content: "\EAB3" }
+.i-fi-skull:before { content: "\EAB4" }
+.i-fi-social-500px:before { content: "\EAB5" }
+.i-fi-social-adobe:before { content: "\EAB6" }
+.i-fi-social-amazon:before { content: "\EAB7" }
+.i-fi-social-android:before { content: "\EAB8" }
+.i-fi-social-apple:before { content: "\EAB9" }
+.i-fi-social-behance:before { content: "\EABA" }
+.i-fi-social-bing:before { content: "\EABB" }
+.i-fi-social-blogger:before { content: "\EABC" }
+.i-fi-social-delicious:before { content: "\EABD" }
+.i-fi-social-designer-news:before { content: "\EABE" }
+.i-fi-social-deviant-art:before { content: "\EABF" }
+.i-fi-social-digg:before { content: "\EAC0" }
+.i-fi-social-dribbble:before { content: "\EAC1" }
+.i-fi-social-drive:before { content: "\EAC2" }
+.i-fi-social-dropbox:before { content: "\EAC3" }
+.i-fi-social-evernote:before { content: "\EAC4" }
+.i-fi-social-facebook:before { content: "\EAC5" }
+.i-fi-social-flickr:before { content: "\EAC6" }
+.i-fi-social-forrst:before { content: "\EAC7" }
+.i-fi-social-foursquare:before { content: "\EAC8" }
+.i-fi-social-game-center:before { content: "\EAC9" }
+.i-fi-social-github:before { content: "\EACA" }
+.i-fi-social-google-plus:before { content: "\EACB" }
+.i-fi-social-hacker-news:before { content: "\EACC" }
+.i-fi-social-hi5:before { content: "\EACD" }
+.i-fi-social-instagram:before { content: "\EACE" }
+.i-fi-social-joomla:before { content: "\EACF" }
+.i-fi-social-lastfm:before { content: "\EAD0" }
+.i-fi-social-linkedin:before { content: "\EAD1" }
+.i-fi-social-medium:before { content: "\EAD2" }
+.i-fi-social-myspace:before { content: "\EAD3" }
+.i-fi-social-orkut:before { content: "\EAD4" }
+.i-fi-social-path:before { content: "\EAD5" }
+.i-fi-social-picasa:before { content: "\EAD6" }
+.i-fi-social-pinterest:before { content: "\EAD7" }
+.i-fi-social-rdio:before { content: "\EAD8" }
+.i-fi-social-reddit:before { content: "\EAD9" }
+.i-fi-social-skillshare:before { content: "\EADA" }
+.i-fi-social-skype:before { content: "\EADB" }
+.i-fi-social-smashing-mag:before { content: "\EADC" }
+.i-fi-social-snapchat:before { content: "\EADD" }
+.i-fi-social-spotify:before { content: "\EADE" }
+.i-fi-social-squidoo:before { content: "\EADF" }
+.i-fi-social-stack-overflow:before { content: "\EAE0" }
+.i-fi-social-steam:before { content: "\EAE1" }
+.i-fi-social-stumbleupon:before { content: "\EAE2" }
+.i-fi-social-treehouse:before { content: "\EAE3" }
+.i-fi-social-tumblr:before { content: "\EAE4" }
+.i-fi-social-twitter:before { content: "\EAE5" }
+.i-fi-social-vimeo:before { content: "\EAE6" }
+.i-fi-social-windows:before { content: "\EAE7" }
+.i-fi-social-xbox:before { content: "\EAE8" }
+.i-fi-social-yahoo:before { content: "\EAE9" }
+.i-fi-social-yelp:before { content: "\EAEA" }
+.i-fi-social-youtube:before { content: "\EAEB" }
+.i-fi-social-zerply:before { content: "\EAEC" }
+.i-fi-social-zurb:before { content: "\EAED" }
+.i-fi-sound:before { content: "\EAEE" }
+.i-fi-star:before { content: "\EAEF" }
+.i-fi-stop:before { content: "\EAF0" }
+.i-fi-strikethrough:before { content: "\EAF1" }
+.i-fi-subscript:before { content: "\EAF2" }
+.i-fi-superscript:before { content: "\EAF3" }
+.i-fi-tablet-landscape:before { content: "\EAF4" }
+.i-fi-tablet-portrait:before { content: "\EAF5" }
+.i-fi-target-two:before { content: "\EAF6" }
+.i-fi-target:before { content: "\EAF7" }
+.i-fi-telephone-accessible:before { content: "\EAF8" }
+.i-fi-telephone:before { content: "\EAF9" }
+.i-fi-text-color:before { content: "\EAFA" }
+.i-fi-thumbnails:before { content: "\EAFB" }
+.i-fi-ticket:before { content: "\EAFC" }
+.i-fi-torso-business:before { content: "\EAFD" }
+.i-fi-torso-female:before { content: "\EAFE" }
+.i-fi-torso:before { content: "\EAFF" }
+.i-fi-torsos-all-female:before { content: "\EB00" }
+.i-fi-torsos-all:before { content: "\EB01" }
+.i-fi-torsos-female-male:before { content: "\EB02" }
+.i-fi-torsos-male-female:before { content: "\EB03" }
+.i-fi-torsos:before { content: "\EB04" }
+.i-fi-trash:before { content: "\EB05" }
+.i-fi-trees:before { content: "\EB06" }
+.i-fi-trophy:before { content: "\EB07" }
+.i-fi-underline:before { content: "\EB08" }
+.i-fi-universal-access:before { content: "\EB09" }
+.i-fi-unlink:before { content: "\EB0A" }
+.i-fi-unlock:before { content: "\EB0B" }
+.i-fi-upload-cloud:before { content: "\EB0C" }
+.i-fi-upload:before { content: "\EB0D" }
+.i-fi-usb:before { content: "\EB0E" }
+.i-fi-video:before { content: "\EB0F" }
+.i-fi-volume-none:before { content: "\EB10" }
+.i-fi-volume-strike:before { content: "\EB11" }
+.i-fi-volume:before { content: "\EB12" }
+.i-fi-web:before { content: "\EB13" }
+.i-fi-wheelchair:before { content: "\EB14" }
+.i-fi-widget:before { content: "\EB15" }
+.i-fi-wrench:before { content: "\EB16" }
+.i-fi-x-circle:before { content: "\EB17" }
+.i-fi-x:before { content: "\EB18" }
+.i-fi-yen:before { content: "\EB19" }
+.i-fi-zoom-in:before { content: "\EB1A" }
+.i-fi-zoom-out:before { content: "\EB1B" }

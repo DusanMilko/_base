@@ -1,0 +1,38 @@
+.hamburger {
+  text-decoration: none;
+  padding: 10px;
+  padding: 8px 15px;
+  float: left;
+  border-right: 1px solid $iron;
+  height: 45px;
+
+  .fi-list,
+  .fi-x {
+    color: $oil;
+    font-size: 20px;
+  }
+}
+
+.js-hamburger {
+  .fi-list {
+    display: inline-block;
+  }
+  .fi-x {
+    display: none;
+  }
+
+  &.is-active {
+    .fi-list {
+      display: none;
+    }
+    .fi-x {
+      display: inline-block;
+    }
+  }
+}
+
+.js-hamburger-cont {
+  &.is-active {
+    display: block;
+  }
+}

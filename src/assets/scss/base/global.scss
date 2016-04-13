@@ -1,0 +1,203 @@
+// Global 
+
+body {
+  -webkit-font-smoothing:antialiased;
+}
+
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+// General
+// ------------------------------------------------------ General
+.center {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+}
+.clear {
+  clear: both;
+}
+.icon {
+  display: block;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-visible {
+  overflow: visible;
+}
+.sup {
+  font-size: 75%;
+  line-height: 0;
+}
+.block{
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.thin {
+  font-weight: 100;
+}
+.light {
+  font-weight: 200;
+}
+.bold {
+  font-weight: 600;
+}
+.text-capitalize, .caps {
+  text-transform: uppercase;
+}
+
+// Size
+// ------------------------------------------------------ Size
+.hunw {
+  width: 100%;
+}
+.hunh {
+  height: 100%;
+}
+
+// Position
+// ------------------------------------------------------ Position
+.fleft,
+.float-left {
+  float: left;
+}
+.fright,
+.float-right {
+  float: right;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.top {
+  top: 0;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.cenpos {
+  position: relative;
+  left:50%;
+
+  .cenpos-in {
+    position: relative;
+    left: -50%;
+  }
+}
+
+// Display - vertical align middle
+// ------------------------------------------------------ Display
+.valign {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .valign-inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+// Reset grid to auto width
+// ------------------------------------------------------ Reset grid to auto width
+.xsmall-auto {
+  @include breakpoint(xsmall) {
+    width: auto;
+  }
+}
+.small-auto {
+  @include breakpoint(small) {
+    width: auto;
+  }
+}
+.medium-auto {
+  @include breakpoint(medium) {
+    width: auto;
+  }
+}
+.large-auto {
+  @include breakpoint(large) {
+    width: auto;
+  }
+}
+.xlarge-auto {
+  @include breakpoint(xlarge) {
+    width: auto;
+  }
+}
+
+// Border radius
+// ------------------------------------------------------ Border radius
+.is-smooth {
+  border-radius: 5px;
+}
+.is-round {
+  border-radius: 500px;
+}
+
+// Media Clears
+// ------------------------------------------------------ Media Clears
+
+.xsmall-clear {
+  clear: both;
+}
+.xsmall-clear-auto {
+  clear: none;
+}
+@include breakpoint(small) {
+  .small-clear {
+    clear: both;
+  }
+  .small-clear-auto {
+    clear: none;
+  }
+}
+@include breakpoint(medium) {
+  .medium-clear {
+    clear: both;
+  }
+  .medium-clear-auto {
+    clear: none;
+  }
+}
+@include breakpoint(large) {
+  .large-clear {
+    clear: both;
+  }
+  .large-clear-auto {
+    clear: none;
+  }
+}
+@include breakpoint(xlarge) {
+  .xlarge-clear {
+    clear: both;
+  }
+  .xlarge-clear-auto {
+    clear: none;
+  }
+}
+@include breakpoint(xxlarge) {
+  .xxlarge-clear {
+    clear: both;
+  }
+  .xxlarge-clear-auto {
+    clear: none;
+  }
+}

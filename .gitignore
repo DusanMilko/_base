@@ -1,0 +1,46 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore:
+# https://help.github.com/articles/ignoring-files
+
+# You may also be interested in having a .gitignore_global file
+# in your $HOME directory. To add this to your config run
+# `git config --global core.excludesfile ~/.gitignore_global`
+
+# The following are files and folders common for Rokkan projects
+
+# Common Development Folders #
+##############################
+.sass-cache/
+cache/
+vendor/
+logs/
+node_modules/
+bower_components/
+build/
+dist/
+todo/
+composer.phar
+
+# Common Text Editor or IDE files #
+###################################
+.idea/
+*.sublime-workspace
+*.tmproj
+*.tmproject
+tmtags
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# Common OS generated files #
+#############################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
