@@ -50,6 +50,36 @@ gulp.task('clean', function(cb) {
 
 // ----------------------------------------------------------------
 
+// Generate conteful
+
+gulp.task('data', function() {
+  var contentful = require('contentful');
+  var source = require('vinyl-source-stream');
+
+  content = contentful.createClient({
+    space : '58klxragf689',
+    accessToken : 'c5b61820586316fe18e557fbb7cbd3fe0261ef2647e30f0e9a7803ca6f67a772'
+  }); 
+ 
+  content.getEntries()
+  .then(function(entries) {
+    var stream = source('all.json');
+    stream.end( JSON.stringify(entries) );
+    stream.pipe(gulp.dest(paths.src+'data'));
+  });
+
+  content.getEntries({
+    content_type : 'article'
+  })
+  .then(function(entries) {
+    var stream = source('articles.json');
+    stream.end( JSON.stringify(entries) );
+    stream.pipe(gulp.dest(paths.src+'data'));
+  });
+});
+
+// ----------------------------------------------------------------
+
 // Generate Css from Scss
 gulp.task('scss', function() {
   gulp.src(paths.src+'assets/scss/main.scss')
@@ -151,6 +181,10 @@ gulp.task('compressjs', function() {
     .pipe(rename('min.js'))
     .pipe(gulp.dest(paths.build+'assets/js'))
 });
+
+// ----------------------------------------------------------------
+
+// Contentful
 
 // ----------------------------------------------------------------
 
