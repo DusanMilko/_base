@@ -1,0 +1,48 @@
+---
+layout: docs
+title: Docs
+side_nav:
+  - Pages
+---
+
+<div id="pages" class="docs__item">
+  {{#parseJSON '{
+    "title": "Pages",
+    "desc": "List of project pages"
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+    <div class="xsmall-24 small-12 column">
+      <h4>Project</h4>
+      <ul>
+        <li>
+          <a href="/">Homepage</a>
+        </li>
+      </ul>
+    </div>
+    <div class="xsmall-24 small-12 column">
+      <h4>Docs</h4>
+      <ul>
+        <li>
+          <a href="/docs/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/docs/styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="/docs/elements.html">Elements</a>
+        </li>
+        <li>
+          <a href="/docs/modules.html">Modules</a>
+        </li>
+        <li>
+          <a href="/docs/components.html">Components</a>
+        </li>
+        <li>
+          <a href="/docs/forms.html">Forms</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div><!--end section-->

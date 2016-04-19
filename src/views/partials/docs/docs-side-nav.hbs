@@ -1,0 +1,13 @@
+<div class="docs-side-nav show-for-large-up">
+  <a href="#!" class="js-docs-side-nav"><i class="fi-thumbnails"></i></a>
+  <ul class="xsmall-24">
+    {{#each side_nav}}
+    <li>
+      <a href="#{{lowercase this}}" class="js-scroll-to" data-offset="45">{{this}}</a>
+    </li>
+    {{/each}}
+    <li>
+      <a href="#top" class="js-scroll-to" data-offset="0"><i class="fi-arrow-up is-round"></i>top</a>
+    </li>
+  </ul>
+</div>

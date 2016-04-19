@@ -16,6 +16,10 @@ var lodash = require('lodash');
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 
+// static site
+var assemble = require('assemble');
+var app = assemble();
+
 var paths = {
   src: 'src/',
   build: 'build/',
@@ -27,10 +31,21 @@ var sassPaths = [
 ];
 
 
-gulp.task('default', ['iconfont','images','fonts','scss','js'], function() {
+gulp.task('default', ['iconfont','images','fonts','scss','js','assemble'], function() {
   gulp.watch(paths.src+'assets/scss/**/*.scss', ['scss']);
   gulp.watch(paths.src+'assets/js/**/*.js', ['js']);
   gulp.watch(paths.src+'assets/imgs/**/*.{jpg,png,gif}', ['images']);
+  gulp.watch(paths.src+'views/**/*.hbs', ['assemble']);
+});
+
+gulp.task('build', ['clean'], function() {
+  gulp.run('default');
+});
+
+gulp.task('clean', function(cb) {
+  var del = require('del');
+
+  return del([paths.build+'**/*'], cb);
 });
 
 // ----------------------------------------------------------------
@@ -136,3 +151,43 @@ gulp.task('compressjs', function() {
     .pipe(rename('min.js'))
     .pipe(gulp.dest(paths.build+'assets/js'))
 });
+
+// ----------------------------------------------------------------
+
+// Assemble
+app.data(paths.src+'data/**/*.{json,yml}');
+app.helpers(paths.src+'helpers/**/*.js');
+app.partials(paths.src+'views/partials/**/*.hbs');
+app.layouts(paths.src+'views/layouts/**/*.hbs')
+
+gulp.task('assemble', function() {
+  app.build(['views','docs'], function(err) {
+    if (err) return cb(err);
+    console.log('done!');
+  });
+});
+
+app.task('views', function() {
+  app.pages(paths.src+'views/pages/**/*.hbs');
+
+  return app.toStream('pages')
+    .pipe(app.renderFile())
+    .pipe(rename(function (path) {
+      path.extname = ".html"
+    }))
+    .pipe(app.dest(paths.build));
+});
+
+app.create('docs');
+app.task('docs', function() {
+   app.docs(paths.src+'views/docs/**/*.hbs');
+
+  return app.toStream('docs')
+    .pipe(app.renderFile())
+    .pipe(rename(function (path) {
+      path.extname = ".html"
+    }))
+    .pipe(app.dest(paths.build+'docs/'));
+});
+
+module.exports = app;

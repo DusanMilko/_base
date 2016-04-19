@@ -1,0 +1,199 @@
+---
+layout: docs
+title: Overview
+side_nav:
+  - Objective
+  - Methodology
+  - Tools
+  - Structure
+  - Setup
+---
+
+<div id="objective" class="docs__item">
+  {{#parseJSON '{
+    "title": "Objective",
+    "desc": ""
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+    <p>
+      The objective is to..
+    </p>
+  </div>
+</div><!--end section-->
+
+<div id="methodology" class="docs__item">
+  {{#parseJSON '{
+    "title": "Methodology",
+    "desc": ""
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+    <p>
+      The website is built in an atomic structure.
+      </br>
+      <ul>
+        <li>
+          Styles - These are the basic visual elements, modifiers and grid
+        </li>
+        <li>
+          Elements - These are small singular pieces that build up molecules
+        </li>
+        <li>
+          Modules - These are standalone pieces that are modules/sections of the project
+        </li>
+        <li>
+          Components - These are functional pieces of the project
+        </li>
+        <li>
+          Forms - Form Elements
+        </li>
+      </ul> 
+    </p>
+  </div>
+</div><!--end section-->
+
+<div id="tools" class="docs__item">
+  {{#parseJSON '{
+    "title": "Tools",
+    "desc": ""
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+    <p>
+      The tools used are gulp, assemble, and custom foundation 5. 
+      </br>
+      It is build mobile first meaning mobile styles are loaded first and then respective styles loaded through media queries to match.
+    </p>
+
+    <p>
+      Media Queries:
+
+      <ul>
+        <li>
+          $xsmall-range: (0em, 479px);
+        </li>
+        <li>
+          $small-range: (480px, 639px);
+        </li>
+        <li>
+          $medium-range: (640px, 859px);
+        </li>
+        <li>
+          $large-range: (860px, 1023px);
+        </li>
+        <li>
+          $xlarge-range: (1024px, 1440px);
+        </li>
+        <li>
+          $xxlarge-range: (1440px, 99999999em);
+        </li>
+      </ul>
+    </p>
+  </div>
+</div><!--end section-->
+
+<div id="structure" class="docs__item">
+  {{#parseJSON '{
+    "title": "Structure",
+    "desc": ""
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+    <p>
+      The structure...
+    </p>
+
+    {{#markdown}}
+      └── src
+          ├── assets
+          │    ├── fonts
+          │    ├── icons
+          │    │   ├── _icon-font.css (icon font template)
+          │    │   └── svgs
+          │    │        └── *.svg
+          │    ├── imgs
+          │    │   └── *.*
+          │    ├── js
+          │    │   ├── libs
+          │    │   ├── app
+          │    │   ├── data
+          │    │   ├── templates
+          │    │   └── main.js
+          │    └── scss
+          │        ├── libs
+          │        ├── elements
+          │        ├── modules
+          │        ├── pages
+          │        ├── theme
+          │        ├── main.scss
+          │        └── _*.scss
+          ├── data
+          │   └── *.{json,yml}
+          ├── helpers
+          │   └── *.js
+          └── views
+              ├── docs
+              │   └── *.{hbs,html,php}
+              ├── partials
+              │   └── *.{hbs,html,php}
+              ├── layouts
+              │   └── default.{hbs,html,php}
+              └── pages
+                  └── index.{hbs,html,php}
+    {{/markdown}}
+  </div>
+</div><!--end section-->
+
+<div id="setup" class="docs__item">
+  {{#parseJSON '{
+    "title": "Setup",
+    "desc": ""
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+    <p>
+      To setup install node: https://nodejs.org/
+      </br>
+      Then run <code>npm install</code> in the root of the folder to install gulp, assemble and other tools.
+      </br>
+      Gulp Tasks:
+      <ul>
+        <li>
+          <code>gulp build</code> - cleans and builds everything into build folder
+        </li>
+        <li>
+          <code>gulp clean</code> - cleans build folder
+        </li>
+        <li>
+          <code>gulp css</code> - compile scss to css
+        </li>
+        <li>
+          <code>gulp js</code> - compile js with browserify
+        </li>
+        <li>
+          <code>gulp images</code> - move images to build
+        </li>
+        <li>
+          <code>gulp assemble</code> - generate all pages
+        </li>
+        <li>
+          <code>gulp fonts</code> - move fonts to build folder
+        </li>
+        <li>
+          <code>gulp todo</code> - go through and generate todo's based off of comments "//TODO:"
+        </li>
+        <li>
+          <code>gulp watch</code> - look for changes in src/pages|scss|js
+        </li>
+      </ul>
+      </br>
+      Main task to use are <code>gulp build</code> and <code>gulp watch</code>.
+    </p>
+  </div>
+</div><!--end section-->

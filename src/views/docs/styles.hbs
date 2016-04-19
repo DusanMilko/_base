@@ -1,0 +1,263 @@
+---
+layout: docs
+title: Styles
+side_nav:
+  - Grid
+  - Block-Grid
+  - Color
+  - Typography
+  - Buttons
+  - Title
+---
+
+<div id="grid" class="docs__item">
+  {{#parseJSON '{
+    "title": "Grid",
+    "desc": "The grid is based on 24 column"
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+
+    <p>
+      Each size corresponds to the media query
+      <ul>
+        <li>
+          xsmall-#
+        </li>
+        <li>
+          small-#
+        </li>
+        <li>
+          medium-#
+        </li>
+        <li>
+          large-#
+        </li>
+        <li>
+          xlarge-#
+        </li>
+      </ul>
+    </p>
+
+    <div class="row">
+      <div class="xsmall-24" style="padding: 10px; background: #ccc;">
+        xsmall-24
+      </div>
+      <div class="xsmall-12" style="padding: 10px; background: #ddd;">
+        xsmall-12
+      </div>
+      <div class="xsmall-12 column" style="padding: 10px; background: #ccc;">
+        xsmall-12 column
+      </div>
+      <div class="xsmall-12 column" style="padding: 10px; background: #ddd;">
+        xsmall-12 column
+      </div>
+      <div class="xsmall-8 column" style="padding: 10px; background: #ccc;">
+        xsmall-8 column
+      </div>
+      <div class="xsmall-8 column" style="padding: 10px; background: #ddd;">
+        xsmall-8 column
+      </div>
+      <div class="xsmall-8 column" style="padding: 10px; background: #ccc;">
+        xsmall-8 column
+      </div>
+      <div class="xsmall-12 push-12 column" style="padding: 10px; background: #ccc;">
+        xsmall-12 push-12 column
+      </div>
+      <div class="xsmall-6 pull-12 column" style="padding: 10px; background: #ccc;">
+        xsmall-6 pull-12
+      </div>
+      <div class="xsmall-8 column" style="padding: 10px; background: #ccc;">
+        xsmall-8 column (last column floats right)
+      </div>
+    </div>
+
+  </div>
+</div><!--end section-->
+
+<div id="block-grid" class="docs__item">
+  {{#parseJSON '{
+    "title": "Block Grid",
+    "desc": "The grid is used with list items, only requires class on <code>ul</code>"
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+
+    <div class="row">
+
+    <ul class="xsmall-block-grid-3 medium-block-grid-5">
+      <li style="padding: 10px; background: #ccc;">
+        item
+      </li>
+      <li style="padding: 10px; background: #ddd;">
+        item
+      </li>
+      <li style="padding: 10px; background: #ccc;">
+        item
+      </li>
+      <li style="padding: 10px; background: #ddd;">
+        item
+      </li>
+      <li style="padding: 10px; background: #ccc;">
+        item
+      </li>
+    </ul>
+
+    </div>
+
+    {{#markdown}}
+
+      <ul class="xsmall-block-grid-3 medium-block-grid-5">
+        <li>
+          item
+        </li>
+      </ul>
+
+    {{/markdown}}
+
+  </div>
+</div><!--end section-->
+
+<div id="color" class="docs__item">
+
+  {{#parseJSON '{
+    "title": "Color",
+    "desc": "These are the colors beings used."
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+
+  <div class="docs__item-view xsmall-24">
+    <h4 class="docs-heading">Basic Colors</h4>
+    <ul class="xsmall-block-grid-3 medium-block-grid-5">
+      <li>
+        <div class="color-swatch" style="background: #000000;">
+        </div>
+        <div class="color-swatch-desc">
+          black <br><strong>#000000</strong>
+        </div>
+      </li>
+      <li>
+        <div class="color-swatch" style="background: #333333;">
+        </div>
+        <div class="color-swatch-desc">
+          oil <br><strong>#333333</strong>
+        </div>
+      </li>
+      <li>
+        <div class="color-swatch" style="background: #666666;">
+        </div>
+        <div class="color-swatch-desc">
+          steel <br><strong>#666666</strong>
+        </div>
+      </li>
+      <li>
+        <div class="color-swatch" style="background: #dddddd;">
+        </div>
+        <div class="color-swatch-desc">
+          gainsboro <br><strong>#dddddd</strong>
+        </div>
+      </li>
+      <li>
+        <div class="color-swatch" style="background: #ffffff;">
+        </div>
+        <div class="color-swatch-desc">
+          white <br><strong>#ffffff</strong>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div><!--end section-->
+
+<div id="typography" class="docs__item">
+  {{#parseJSON '{
+    "title": "Typography",
+    "desc": "desc"
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+    <h1>Heading H1</h1>
+    <h2>Heading H2</h2>
+    <h3>Heading H3</h3>
+    <h4>Heading H4</h4>
+    <h5>Heading H5</h5>
+    <h6>Heading H6</h6>
+
+    <h1 class="subheader">Subheader</h1>
+    <h2 class="subheader">Subheader</h2>
+
+    <h1>Heading <small>small</small></h1>
+    <h2>Heading <small>small</small></h2>
+  </div>
+</div><!--end section-->
+
+<div id="buttons" class="docs__item">
+
+  {{#parseJSON '{
+    "title": "Buttons",
+    "desc": "These are the buttons beings used."
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+
+  <div class="docs__item-view xsmall-24">
+    <p>
+      <a class="button button--xsmall" href="#!">xsmall</a>
+      <a class="button button--small" href="#!">small</a>
+      <a class="button" href="#!">button</a>
+      <a class="button button--large" href="#!">large</a>
+    </p>
+    <p>
+      <a class="button is-smooth" href="#!">is-smooth</a>
+      <a class="button is-round" href="#!">is-round</a>
+    </p>
+    <p>
+      <a class="button button--filled" href="#!">filled</a>
+      <a class="button button--filled button--to-filled-color" href="#!">filled</a>
+      <a class="button button--to-filled-color" href="#!">filled color</a>
+      <a class="button button--color" href="#!">color</a>
+      <a class="button button--color button--filled" href="#!">color + filled</a>
+    </p>
+
+    {{#markdown}}
+
+    <a class="button button--xsmall" href="#!">xsmall</a>
+    <a class="button button--small" href="#!">small</a>
+    <a class="button" href="#!">button</a>
+    <a class="button button--large" href="#!">large</a>
+
+    {{/markdown}}
+  </div>
+
+  {{#parseJSON '{
+    "title": "Button Group",
+    "desc": "These are the button groups beings used."
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+
+  <div class="docs__item-view xsmall-24">
+
+
+    {{#markdown}}
+
+
+
+    {{/markdown}}
+  </div>
+</div><!--end section-->
+
+<div id="" class="docs__item">
+  {{#parseJSON '{
+    "title": "title",
+    "desc": "desc"
+  }'}}
+  {{> docs-desc }}
+  {{/parseJSON}}
+  <div class="docs__item-view xsmall-24">
+  </div>
+</div><!--end section-->

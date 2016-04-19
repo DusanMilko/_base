@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "base project",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "assemble": "^0.10.0"
+  },
   "devDependencies": {
+    "del": "^2.2.0",
     "foundation-sites": "^6.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
