@@ -11,6 +11,15 @@
 </head>
 <body id="top">
 
+  {{#each articles.items}}
+  <h1>
+  	{{ this.fields.articleTitle }}
+  </h1>
+  <p>
+  	{{ this.fields.articleCopy }}
+  </p>
+  {{/each}}
+
   {% body %}
 
 <script src="/assets/js/main.js"></script>
