@@ -1,14 +1,5 @@
 $ = require('jquery');
-globals = require('./app/globals');
-basic = require('./app/basic');
-scrollTo = require('./app/scroll-to');
-hamburger = require('./app/hamburger');
-docs_side_nav = require('./app/docs-side-nav');
+React = require('react');
+ReactDOM = require('react-dom');
 
-globals();
-basic();
-scrollTo();
-hamburger();
-docs_side_nav();
-
-o(plugins);
+var App = require('./app/App.js');

@@ -1,5 +1,12 @@
 <ul>
-	<li {{#is active "home"}}active{{/is}}>
-    
+	<li>
+    	{{#is active "home"}}<strong>{{/is}}
+    		Home
+    	{{#is active "home"}}</strong>{{/is}}
+	</li>
+	<li>
+    	{{#is active "other"}}<strong>{{/is}}
+    		Other
+    	{{#is active "other"}}</strong>{{/is}}
 	</li>
 </ul>

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 var rename = require('gulp-rename');
 var cssGlobbing = require('gulp-css-globbing');
+var gutil = require('gutil');
 
 // images
 var imagemin = require('gulp-imagemin');
@@ -15,6 +16,7 @@ var lodash = require('lodash');
 // js
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
+var reactify = require('reactify');
 
 // static site
 var assemble = require('assemble');
@@ -166,9 +168,12 @@ gulp.task('js', function() {
   gulp.src(paths.src+'assets/js/data/**/*')
     .pipe(gulp.dest(paths.build+'assets/js/data'));
   gulp.src(paths.src+'assets/js/main.js')
-    .pipe(browserify({ debug : true }))
+    .pipe(browserify({ 
+      debug : true,
+      transform: [reactify],
+    }))
     .on('error', function (err) {
-      gutil.log(gutil.colors.red('ERROR: ')+gutil.colors.yellow(err.message));
+      gutil.log('ERROR: '+err.message);
       this.emit('end');
     })
     .pipe(gulp.dest(paths.build+'assets/js'))
@@ -195,9 +200,9 @@ app.partials(paths.src+'views/partials/**/*.hbs');
 app.layouts(paths.src+'views/layouts/**/*.hbs')
 
 gulp.task('assemble', function() {
-  app.build(['views','docs'], function(err) {
+  app.build(['views'], function(err) {
     if (err) return cb(err);
-    console.log('done!');
+    console.log('Pages Are Complete!');
   });
 });
 
@@ -210,18 +215,6 @@ app.task('views', function() {
       path.extname = ".html"
     }))
     .pipe(app.dest(paths.build));
-});
-
-app.create('docs');
-app.task('docs', function() {
-   app.docs(paths.src+'views/docs/**/*.hbs');
-
-  return app.toStream('docs')
-    .pipe(app.renderFile())
-    .pipe(rename(function (path) {
-      path.extname = ".html"
-    }))
-    .pipe(app.dest(paths.build+'docs/'));
 });
 
 module.exports = app;
