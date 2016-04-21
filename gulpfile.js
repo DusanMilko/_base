@@ -107,17 +107,6 @@ gulp.task('scss', function() {
       browsers: ['last 2 versions', 'ie >= 9']
     }))
     .pipe(gulp.dest(paths.build+'assets/css'));
-
-  // docs css
-  gulp.src(paths.src+'assets/scss/docs/docs.scss')
-    .pipe($.sass({
-      includePaths: sassPaths
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 9']
-    }))
-    .pipe(gulp.dest(paths.build+'docs/css'));
 });
 
 // ----------------------------------------------------------------
