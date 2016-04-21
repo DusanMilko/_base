@@ -1,3 +1,5 @@
+var List = require('./List.js');
+
 var App = React.createClass({
 	getInitialState: function() {
     	return {
@@ -6,8 +8,8 @@ var App = React.createClass({
   	},
   	getDefaultProps: function() {
 		return {
-			greeting: "Hello",
-			img: "http://placehold.it/100x100"
+			greeting: 'Hello',
+			img: 'http://placehold.it/100x100'
 		};
 	},
 	add: function() {
@@ -38,4 +40,4 @@ var App = React.createClass({
 	
 module.exports = App;
 
-ReactDOM.render(<App img="http://placehold.it/100x100/cba" />, document.getElementById('App'));
+ReactDOM.render(<App img='http://placehold.it/100x100/cba' />, document.getElementById('App'));
