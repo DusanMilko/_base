@@ -76,6 +76,31 @@ gulp.task('scss', function() {
     }))
     .pipe(gulp.dest(paths.build+'assets/css'));
 
+  // admin css
+  gulp.src(paths.src+'assets/scss/admin/admin.scss')
+    .pipe(cssGlobbing({
+      extensions: ['.css', '.scss'],
+      ignoreFolders: ['../styles'],
+      autoReplaceBlock: {
+        onOff: false,
+        globBlockBegin: 'cssGlobbingBegin',
+        globBlockEnd: 'cssGlobbingEnd',
+        globBlockContents: '../**/*.scss'
+      },
+      scssImportPath: {
+        leading_underscore: false,
+        filename_extension: false
+      }
+    }))
+    .pipe($.sass({
+      includePaths: sassPaths
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 9']
+    }))
+    .pipe(gulp.dest(paths.build+'admin/css'));
+
   // docs css
   gulp.src(paths.src+'assets/scss/docs/docs.scss')
     .pipe($.sass({
@@ -141,7 +166,16 @@ gulp.task('js', function() {
       gutil.log(gutil.colors.red('ERROR: ')+gutil.colors.yellow(err.message));
       this.emit('end');
     })
-    .pipe(gulp.dest(paths.build+'assets/js'))
+    .pipe(gulp.dest(paths.build+'assets/js'));
+
+  // admin js
+  gulp.src(paths.src+'assets/js/admin/admin.js')
+    .pipe(browserify({ debug : true }))
+    .on('error', function (err) {
+      gutil.log(gutil.colors.red('ERROR: ')+gutil.colors.yellow(err.message));
+      this.emit('end');
+    })
+    .pipe(gulp.dest(paths.build+'admin/js'))
 });
 
 // Compress js
@@ -161,9 +195,9 @@ app.partials(paths.src+'views/partials/**/*.hbs');
 app.layouts(paths.src+'views/layouts/**/*.hbs')
 
 gulp.task('assemble', function() {
-  app.build(['views','docs'], function(err) {
+  app.build(['views','adminviews','docs'], function(err) {
     if (err) return cb(err);
-    console.log('done!');
+    console.log('Pages are Complete!');
   });
 });
 
@@ -176,6 +210,18 @@ app.task('views', function() {
       path.extname = ".html"
     }))
     .pipe(app.dest(paths.build));
+});
+
+app.create('adminviews');
+app.task('adminviews', function() {
+   app.adminviews(paths.src+'views/admin/**/*.hbs');
+
+  return app.toStream('adminviews')
+    .pipe(app.renderFile())
+    .pipe(rename(function (path) {
+      path.extname = ".html"
+    }))
+    .pipe(app.dest(paths.build+'admin/'));
 });
 
 app.create('docs');
