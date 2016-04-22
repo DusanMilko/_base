@@ -178,10 +178,6 @@ gulp.task('compressjs', function() {
 
 // ----------------------------------------------------------------
 
-// Contentful
-
-// ----------------------------------------------------------------
-
 // Assemble
 app.data(paths.src+'data/**/*.{json,yml}');
 app.helpers(paths.src+'helpers/**/*.js');
